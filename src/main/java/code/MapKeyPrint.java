@@ -25,7 +25,12 @@ public class MapKeyPrint {
 		List<Map<String, String>> list = tableList.stream().filter(m -> 
 		(m.get("table").equals("a1") && m.get("owner").equals("1"))).collect(Collectors.toList());
 		System.out.println(list.size());
-		
+
+		tableList.forEach(m ->{
+			m.forEach((k,v)->{
+				System.out.println(k+" -----> "+v);
+			});
+		});
 		
 	}
 }
